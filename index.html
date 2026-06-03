@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curso de Inverno 2026 | PPGBB - ICC/Fiocruz</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background-color: #f5f7fc;
+            color: #1e2a3e;
+            line-height: 1.5;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header */
+        .header {
+            background: linear-gradient(135deg, #0b3b5f 0%, #083452 100%);
+            color: white;
+            padding: 2rem 0;
+            border-bottom: 4px solid #f0a500;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+        }
+
+        .header .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 0.25rem;
+        }
+
+        .header .date-place {
+            font-size: 1rem;
+            font-weight: 500;
+            background: rgba(255,255,255,0.15);
+            display: inline-block;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            margin-top: 0.75rem;
+        }
+
+        .badge-gratis {
+            background-color: #2c7a4d;
+            color: white;
+            padding: 0.2rem 0.8rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: bold;
+            margin-left: 0.75rem;
+            display: inline-block;
+        }
+
+        /* Sections */
+        .section {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+            margin: 2rem 0;
+            padding: 1.8rem 2rem;
+        }
+
+        .section h2 {
+            font-size: 1.8rem;
+            margin-bottom: 1.2rem;
+            border-left: 5px solid #f0a500;
+            padding-left: 1rem;
+            color: #0b3b5f;
+        }
+
+        .section h3 {
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.75rem 0;
+            color: #1e4663;
+        }
+
+        /* Minicursos grid */
+        .minicursos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1rem;
+        }
+
+        .card-curso {
+            background: #f9fbfe;
+            padding: 1.2rem;
+            border-radius: 18px;
+            border-left: 4px solid #f0a500;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .card-curso strong {
+            font-size: 1.1rem;
+            color: #0b3b5f;
+            display: block;
+            margin-bottom: 0.5rem;
+        }
+
+        /* Tabelas */
+        .tabela-inscricoes, .tabela-materiais {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+
+        .tabela-inscricoes th, .tabela-inscricoes td,
+        .tabela-materiais th, .tabela-materiais td {
+            border-bottom: 1px solid #e2e8f0;
+            padding: 12px 8px;
+            text-align: left;
+        }
+
+        .tabela-inscricoes th, .tabela-materiais th {
+            font-weight: 600;
+            color: #0b3b5f;
+            background-color: #f1f5f9;
+        }
+
+        .tabela-materiais a {
+            color: #f0a500;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .tabela-materiais a:hover {
+            text-decoration: underline;
+            color: #c97e00;
+        }
+
+        .btn-link {
+            display: inline-block;
+            background-color: #f0a500;
+            color: #1e2a3e;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.7rem 1.5rem;
+            border-radius: 40px;
+            transition: 0.2s;
+            margin-top: 0.5rem;
+        }
+
+        .btn-link:hover {
+            background-color: #d48f00;
+            transform: translateY(-2px);
+        }
+
+        .contato-info {
+            background: #eef2f7;
+            padding: 1rem;
+            border-radius: 16px;
+            margin-top: 1rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #0b2a3e;
+            color: #cddfe7;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        .logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .logos span {
+            font-weight: bold;
+            background: rgba(255,255,255,0.1);
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 700px) {
+            .section {
+                padding: 1.2rem;
+            }
+            .header h1 {
+                font-size: 1.5rem;
+            }
+            .tabela-materiais, .tabela-inscricoes {
+                font-size: 0.85rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <div class="container">
+        <h1>VIII Curso de Inverno do PPGBB <span class="badge-gratis">Presencial + Gratuito</span></h1>
+        <div class="subtitle">Instituto Carlos Chagas – Fiocruz Paraná</div>
+        <div class="date-place">
+            Data: 27 a 31 de julho de 2026 | Local: Curitiba – PR
+        </div>
+        <div class="date-place" style="background: #f0a500; color:#1e2a3e; margin-top: 12px;">
+            Edição especial: Centenário da descoberta da doença de Chagas por Carlos Chagas
+        </div>
+    </div>
+</header>
+
+<main class="container">
+    <!-- Sobre o curso -->
+    <div class="section">
+        <h2>Sobre o evento</h2>
+        <p>O <strong>Curso de Inverno do Programa de Pós-Graduação em Biologia Celular e Molecular (PPGBB)</strong> chega à sua oitava edição com o objetivo de oferecer capacitação teórico-prática para estudantes de graduação, recém-formados (até 2 anos) e alunos de mestrado. Totalmente gratuito e presencial, o curso promove integração entre diferentes áreas da ciência biomédica, com ênfase em metodologias modernas aplicadas à pesquisa em saúde.</p>
+        <p style="margin-top: 0.75rem;"><strong>Local:</strong> Instituto Carlos Chagas (ICC) – Fiocruz Paraná, Rua Professor Algacyr Munhoz Mader, 3775 – Curitiba/PR. Cada minicurso tem carga horária de 20h (teórico-prático).</p>
+    </div>
+
+    <!-- Minicursos -->
+    <div class="section">
+        <h2>Minicursos oferecidos</h2>
+        <div class="minicursos-grid">
+            <div class="card-curso">
+                <strong>Bioinformática básica e aplicada à genômica e transcriptômica</strong>
+                <p>Laboratório de Bioinformática e Genômica Clínica (BioGC). Introdução à linha de comando, análise de dados NGS e aplicações clínicas.</p>
+            </div>
+            <div class="card-curso">
+                <strong>Biologia Integrativa do Câncer</strong>
+                <p>Ferramentas moleculares e aplicações clínicas: oncogenes, vias de sinalização e modelos experimentais.</p>
+            </div>
+            <div class="card-curso">
+                <strong>Introdução às Arboviroses</strong>
+                <p>Teoria e prática sobre dengue, zika, chikungunya, interação vírus-vetor e diagnóstico laboratorial.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Material das aulas (apresentações) -->
+    <div class="section">
+        <h2>Material das aulas</h2>
+        <p>Apresentações e arquivos utilizados durante o curso. Os materiais serão disponibilizados conforme autorização dos docentes.</p>
+        <table class="tabela-materiais">
+            <thead>
+                <tr><th>Minicurso</th><th>Aula / Tópico</th><th>Formato</th><th>Link</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bioinformática</td>
+                    <td>Introdução ao Unix</td>
+                    <td>PDF</td>
+                    <td><a href="materiais/aula1_bioinfo.pdf" target="_blank">Baixar PDF</a></td>
+                </tr>
+                <tr>
+                    <td>Bioinformática</td>
+                    <td>Análise de RNA-Seq</td>
+                    <td>HTML</td>
+                    <td><a href="materiais/aula2_bioinfo.html" target="_blank">Visualizar HTML</a></td>
+                </tr>
+                <tr>
+                    <td>Biologia do Câncer</td>
+                    <td>Vias de sinalização celular</td>
+                    <td>PDF</td>
+                    <td><a href="materiais/cancer_vias_sinalizacao.pdf" target="_blank">Baixar PDF</a></td>
+                </tr>
+                <tr>
+                    <td>Biologia do Câncer</td>
+                    <td>Modelos experimentais in vivo</td>
+                    <td>PDF</td>
+                    <td><a href="materiais/cancer_modelos.pdf" target="_blank">Baixar PDF</a></td>
+                </tr>
+                <tr>
+                    <td>Arboviroses</td>
+                    <td>Ciclo do Aedes e epidemiologia</td>
+                    <td>PDF</td>
+                    <td><a href="materiais/arbovirus_epidemiologia.pdf" target="_blank">Baixar PDF</a></td>
+                </tr>
+                <tr>
+                    <td>Arboviroses</td>
+                    <td>Diagnóstico laboratorial</td>
+                    <td>HTML</td>
+                    <td><a href="materiais/arbovirus_diagnostico.html" target="_blank">Visualizar HTML</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="contato-info" style="margin-top: 0.5rem;">Os arquivos estão sendo carregados gradualmente. Caso algum link não funcione, aguarde a atualização ou entre em contato com a organização.</p>
+    </div>
+
+    <!-- Cronograma de inscrições -->
+    <div class="section">
+        <h2>Inscrições e seleção</h2>
+        <table class="tabela-inscricoes">
+            <tr><th>Período de inscrições</th><td>01 a 19 de junho de 2026</td></tr>
+            <tr><th>Período de seleção dos candidatos</th><td>22 de junho a 02 de julho de 2026</td></tr>
+            <tr><th>Divulgação da primeira chamada</th><td>03 de julho de 2026</td></tr>
+            <tr><th>Matrícula dos selecionados</th><td>06 a 09 de julho de 2026</td></tr>
+        </table>
+        <a href="https://www.icc.fiocruz.br/curso-de-inverno" class="btn-link" target="_blank">Inscreva-se no site oficial</a>
+    </div>
+
+    <!-- Contato e organização -->
+    <div class="section">
+        <h2>Contato e organização</h2>
+        <div class="contato-info">
+            <p><strong>E-mail para dúvidas:</strong> curso.inverno@fiocruz.br (exemplo – verificar e-mail oficial)</p>
+            <p><strong>Comissão organizadora:</strong> Alunos do Programa de Pós-Graduação em Biologia Celular e Molecular (PPGBB) e docentes do Instituto Carlos Chagas.</p>
+            <p><strong>Coordenação geral:</strong> Prof. Dr. Alexandre Morrot (ICC/Fiocruz).</p>
+        </div>
+    </div>
+</main>
+
+<footer class="footer">
+    <div class="container">
+        <div class="logos">
+            <span>Fiocruz</span>
+            <span>Instituto Carlos Chagas</span>
+            <span>PPGBB</span>
+        </div>
+        <p>Curso de Inverno 2026 – Programa de Pós-Graduação em Biologia Celular e Molecular | Instituto Carlos Chagas – Fiocruz Paraná</p>
+        <p style="margin-top: 0.5rem;">Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+</body>
+</html>
