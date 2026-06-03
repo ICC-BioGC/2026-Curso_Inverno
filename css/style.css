@@ -1,0 +1,234 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background-color: #f4f6f9;
+    color: #2c3e4e;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Cabeçalho */
+.header {
+    background: linear-gradient(135deg, #003f44 0%, #00262b 100%);
+    color: white;
+    padding: 2rem 0;
+    border-bottom: 5px solid #cc3121;
+}
+
+.header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.header .subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin-bottom: 0.25rem;
+}
+
+.header .date-place {
+    font-size: 1rem;
+    font-weight: 500;
+    background: rgba(255,255,255,0.15);
+    display: inline-block;
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    margin-top: 0.75rem;
+}
+
+.badge-gratis {
+    background-color: #cc3121;
+    color: white;
+    padding: 0.2rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-left: 0.75rem;
+    display: inline-block;
+}
+
+/* Seções */
+.section {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    margin: 2rem 0;
+    padding: 1.8rem 2rem;
+    border-top: 1px solid #e9ecef;
+}
+
+.section h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.2rem;
+    border-left: 5px solid #cc3121;
+    padding-left: 1rem;
+    color: #003f44;
+    font-weight: 600;
+}
+
+.section h3 {
+    font-size: 1.3rem;
+    margin: 1.5rem 0 0.75rem 0;
+    color: #005f66;
+}
+
+/* Cards de informações */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1.2rem;
+    margin: 1rem 0;
+}
+
+.info-card {
+    background: #f8f9fa;
+    padding: 1rem 1.2rem;
+    border-radius: 8px;
+    border-left: 3px solid #cc3121;
+}
+
+.info-card strong {
+    color: #003f44;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.vagas {
+    font-size: 1.1rem;
+    font-weight: bold;
+    background: #e9ecef;
+    display: inline-block;
+    padding: 0.3rem 1.2rem;
+    border-radius: 4px;
+    margin-top: 0.5rem;
+}
+
+/* Listas */
+ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+.two-columns {
+    columns: 2;
+    column-gap: 2rem;
+}
+
+/* Tabelas */
+.tabela-conteudo, .tabela-inscricoes, .tabela-materiais {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+}
+
+.tabela-conteudo th, .tabela-conteudo td,
+.tabela-inscricoes th, .tabela-inscricoes td,
+.tabela-materiais th, .tabela-materiais td {
+    border: 1px solid #dee2e6;
+    padding: 10px 12px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.tabela-conteudo th, .tabela-inscricoes th, .tabela-materiais th {
+    background-color: #e9ecef;
+    color: #003f44;
+    font-weight: 600;
+}
+
+.tabela-materiais a {
+    color: #cc3121;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tabela-materiais a:hover {
+    text-decoration: underline;
+    color: #9e2519;
+}
+
+/* Botões */
+.btn-link {
+    display: inline-block;
+    background-color: #cc3121;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.7rem 1.5rem;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+    margin-top: 0.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-link:hover {
+    background-color: #9e2519;
+}
+
+/* Bloco de contato */
+.contato-info {
+    background: #e9ecef;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.nota {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+}
+
+/* Rodapé */
+.footer {
+    background: #00262b;
+    color: #e9ecef;
+    padding: 2rem 0;
+    margin-top: 3rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+}
+
+.logos span {
+    font-weight: bold;
+    background: rgba(255,255,255,0.1);
+    padding: 0.3rem 1rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+}
+
+/* Responsividade */
+@media (max-width: 700px) {
+    .section {
+        padding: 1.2rem;
+    }
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    .tabela-conteudo, .tabela-materiais, .tabela-inscricoes {
+        font-size: 0.85rem;
+    }
+    .two-columns {
+        columns: 1;
+    }
+}
