@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curso de Inverno 2026 | PPGBB - ICC/Fiocruz</title>
+    <title>Minicurso de Bioinformática | Curso de Inverno 2026 - PPGBB/ICC-Fiocruz</title>
     <style>
         * {
             margin: 0;
@@ -88,30 +88,51 @@
             color: #1e4663;
         }
 
-        /* Minicursos grid */
-        .minicursos-grid {
+        /* Cards e informações */
+        .info-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 1.5rem;
-            margin-top: 1rem;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1rem;
+            margin: 1rem 0;
         }
-
-        .card-curso {
+        .info-card {
             background: #f9fbfe;
-            padding: 1.2rem;
-            border-radius: 18px;
-            border-left: 4px solid #f0a500;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            padding: 1rem;
+            border-radius: 16px;
+            border-left: 3px solid #f0a500;
         }
-
-        .card-curso strong {
-            font-size: 1.1rem;
+        .info-card strong {
             color: #0b3b5f;
-            display: block;
-            margin-bottom: 0.5rem;
         }
 
-        /* Tabelas */
+        .vagas {
+            font-size: 1.2rem;
+            font-weight: bold;
+            background: #eef2f7;
+            display: inline-block;
+            padding: 0.2rem 1rem;
+            border-radius: 30px;
+        }
+
+        /* Tabela conteúdo programático */
+        .tabela-conteudo {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        .tabela-conteudo th, .tabela-conteudo td {
+            border: 1px solid #e2e8f0;
+            padding: 10px 12px;
+            vertical-align: top;
+            text-align: left;
+        }
+        .tabela-conteudo th {
+            background-color: #f1f5f9;
+            color: #0b3b5f;
+            font-weight: 600;
+        }
+
+        /* Tabelas gerais */
         .tabela-inscricoes, .tabela-materiais {
             width: 100%;
             border-collapse: collapse;
@@ -199,7 +220,7 @@
             .header h1 {
                 font-size: 1.5rem;
             }
-            .tabela-materiais, .tabela-inscricoes {
+            .tabela-conteudo, .tabela-materiais, .tabela-inscricoes {
                 font-size: 0.85rem;
             }
         }
@@ -209,8 +230,8 @@
 
 <header class="header">
     <div class="container">
-        <h1>VIII Curso de Inverno do PPGBB <span class="badge-gratis">Presencial + Gratuito</span></h1>
-        <div class="subtitle">Instituto Carlos Chagas – Fiocruz Paraná</div>
+        <h1>Minicurso de Bioinformática <span class="badge-gratis">Presencial + Gratuito</span></h1>
+        <div class="subtitle">VIII Curso de Inverno do PPGBB – Instituto Carlos Chagas (ICC/Fiocruz)</div>
         <div class="date-place">
             Data: 27 a 31 de julho de 2026 | Local: Curitiba – PR
         </div>
@@ -221,83 +242,90 @@
 </header>
 
 <main class="container">
-    <!-- Sobre o curso -->
+    <!-- Sobre o minicurso -->
     <div class="section">
-        <h2>Sobre o evento</h2>
-        <p>O <strong>Curso de Inverno do Programa de Pós-Graduação em Biologia Celular e Molecular (PPGBB)</strong> chega à sua oitava edição com o objetivo de oferecer capacitação teórico-prática para estudantes de graduação, recém-formados (até 2 anos) e alunos de mestrado. Totalmente gratuito e presencial, o curso promove integração entre diferentes áreas da ciência biomédica, com ênfase em metodologias modernas aplicadas à pesquisa em saúde.</p>
-        <p style="margin-top: 0.75rem;"><strong>Local:</strong> Instituto Carlos Chagas (ICC) – Fiocruz Paraná, Rua Professor Algacyr Munhoz Mader, 3775 – Curitiba/PR. Cada minicurso tem carga horária de 20h (teórico-prático).</p>
+        <h2>Sobre o minicurso</h2>
+        <p><strong>Bioinformática básica e aplicada à genômica e transcriptômica</strong></p>
+        <p>Este minicurso introdutório tem como objetivo capacitar estudantes no uso de ferramentas e fluxos de trabalho fundamentais em bioinformática, com foco em aplicações práticas nas áreas de genômica de bactérias e genética humana. Ao longo de cinco encontros teórico-práticos, os participantes aprenderão desde o uso básico do terminal Linux até análises completas de montagem genômica, filogenia, identificação de variantes germinativas humanas e análise de expressão gênica por RNA-Seq. Serão utilizados dados reais de bancos públicos e ferramentas amplamente aplicadas na pesquisa biomédica e biotecnológica.</p>
+        <p style="margin-top: 0.75rem;">Ao final do curso, os alunos estarão aptos a realizar análises básicas de dados ômicos no contexto das biociências e da biotecnologia.</p>
     </div>
 
-    <!-- Minicursos -->
+    <!-- Informações rápidas -->
     <div class="section">
-        <h2>Minicursos oferecidos</h2>
-        <div class="minicursos-grid">
-            <div class="card-curso">
-                <strong>Bioinformática básica e aplicada à genômica e transcriptômica</strong>
-                <p>Laboratório de Bioinformática e Genômica Clínica (BioGC). Introdução à linha de comando, análise de dados NGS e aplicações clínicas.</p>
-            </div>
-            <div class="card-curso">
-                <strong>Biologia Integrativa do Câncer</strong>
-                <p>Ferramentas moleculares e aplicações clínicas: oncogenes, vias de sinalização e modelos experimentais.</p>
-            </div>
-            <div class="card-curso">
-                <strong>Introdução às Arboviroses</strong>
-                <p>Teoria e prática sobre dengue, zika, chikungunya, interação vírus-vetor e diagnóstico laboratorial.</p>
-            </div>
+        <h2>Informações gerais</h2>
+        <div class="info-grid">
+            <div class="info-card"><strong>Laboratórios</strong><br>Laboratório de Bioinformática e Genômica Clínica (BioGC)<br>Laboratório de Biologia Básica de Células-tronco (LabCet)</div>
+            <div class="info-card"><strong>Docente responsável</strong><br>Helisson Faoro</div>
+            <div class="info-card"><strong>Formato</strong><br>Presencial, teórico-prático. Uso de computadores.</div>
+            <div class="info-card"><strong>Carga horária</strong><br>20 horas</div>
         </div>
+        <p class="vagas">Vagas: 8</p>
+    </div>
+
+    <!-- Pré-requisitos -->
+    <div class="section">
+        <h2>Pré-requisitos</h2>
+        <ul style="margin-left: 1.5rem; margin-top: 0.5rem;">
+            <li>Conhecimentos básicos em biologia molecular e/ou genética.</li>
+            <li>Desejável familiaridade com inglês técnico e uso de computador.</li>
+            <li>Não é necessário conhecimento prévio em programação ou Linux.</li>
+        </ul>
+    </div>
+
+    <!-- Corpo discente (monitores) -->
+    <div class="section">
+        <h2>Equipe de monitores</h2>
+        <p>Discentes responsáveis pelo minicurso:</p>
+        <ul style="margin-left: 1.5rem; margin-top: 0.5rem; columns: 2; column-gap: 2rem;">
+            <li>Giovanna Prezia (Doutorado)</li>
+            <li>Hector Hugo Furini (Doutorado)</li>
+            <li>Helena Regina Salome D'Espindula (Pós-Doc)</li>
+            <li>Isabel de Farias Ribeiro (Mestrado)</li>
+            <li>Joyce de Souza (Doutorado)</li>
+            <li>Marco Antônio Campanário (Doutorado)</li>
+            <li>Rodrigo Alexandre Lusa (Mestrado)</li>
+            <li>Sophia Pereira Ozório (Mestrado)</li>
+        </ul>
+    </div>
+
+    <!-- Conteúdo programático -->
+    <div class="section">
+        <h2>Conteúdo programático</h2>
+        <table class="tabela-conteudo">
+            <thead>
+                <tr><th>Módulo</th><th>Conteúdo</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>Fundamentos de Bioinformática e Linux</strong></td><td>Introdução à Bioinformática e ferramentas (teórico e prático). Uso do terminal Linux, comandos básicos, manipulação de arquivos.</td></tr>
+                <tr><td><strong>Genômica Bacteriana e Filogenia</strong></td><td>Introdução a análise de genomas e metagenomas bacterianos. Montagem de genomas bacterianos, anotação funcional e construção de árvores filogenéticas.</td></tr>
+                <tr><td><strong>Genômica Humana</strong></td><td>Bases da análise de dados de WES/WGS (teórico). Chamada e anotação de variantes genéticas germinativas (prático).</td></tr>
+                <tr><td><strong>Análise de RNA-Seq</strong></td><td>Introdução à expressão diferencial com dados de RNA-Seq (teórico). Pipeline completo de expressão diferencial (prático).</td></tr>
+                <tr><td><strong>Atividade final</strong></td><td>Revisão e preparo de apresentação pelos alunos, integrando os conceitos aprendidos.</td></tr>
+            </tbody>
+        </table>
+        <p style="font-size: 0.85rem; margin-top: 0.5rem;">* Programação sujeita a ajustes conforme disponibilidade de infraestrutura e ritmo da turma.</p>
     </div>
 
     <!-- Material das aulas (apresentações) -->
     <div class="section">
         <h2>Material das aulas</h2>
-        <p>Apresentações e arquivos utilizados durante o curso. Os materiais serão disponibilizados conforme autorização dos docentes.</p>
+        <p>Apresentações e arquivos utilizados durante o minicurso. Os materiais serão disponibilizados conforme autorização dos docentes.</p>
         <table class="tabela-materiais">
             <thead>
-                <tr><th>Minicurso</th><th>Aula / Tópico</th><th>Formato</th><th>Link</th></tr>
+                <tr><th>Aula / Tópico</th><th>Formato</th><th>Link</th></tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>Bioinformática</td>
-                    <td>Introdução ao Unix</td>
-                    <td>PDF</td>
-                    <td><a href="materiais/aula1_bioinfo.pdf" target="_blank">Baixar PDF</a></td>
-                </tr>
-                <tr>
-                    <td>Bioinformática</td>
-                    <td>Análise de RNA-Seq</td>
-                    <td>HTML</td>
-                    <td><a href="materiais/aula2_bioinfo.html" target="_blank">Visualizar HTML</a></td>
-                </tr>
-                <tr>
-                    <td>Biologia do Câncer</td>
-                    <td>Vias de sinalização celular</td>
-                    <td>PDF</td>
-                    <td><a href="materiais/cancer_vias_sinalizacao.pdf" target="_blank">Baixar PDF</a></td>
-                </tr>
-                <tr>
-                    <td>Biologia do Câncer</td>
-                    <td>Modelos experimentais in vivo</td>
-                    <td>PDF</td>
-                    <td><a href="materiais/cancer_modelos.pdf" target="_blank">Baixar PDF</a></td>
-                </tr>
-                <tr>
-                    <td>Arboviroses</td>
-                    <td>Ciclo do Aedes e epidemiologia</td>
-                    <td>PDF</td>
-                    <td><a href="materiais/arbovirus_epidemiologia.pdf" target="_blank">Baixar PDF</a></td>
-                </tr>
-                <tr>
-                    <td>Arboviroses</td>
-                    <td>Diagnóstico laboratorial</td>
-                    <td>HTML</td>
-                    <td><a href="materiais/arbovirus_diagnostico.html" target="_blank">Visualizar HTML</a></td>
-                </tr>
+                <tr><td>Introdução ao Unix e linha de comando</td><td>PDF</td><td><a href="materiais/aula1_bioinfo.pdf" target="_blank">Baixar PDF</a></td></tr>
+                <tr><td>Análise de RNA-Seq (Pipeline completo)</td><td>HTML</td><td><a href="materiais/aula2_bioinfo.html" target="_blank">Visualizar HTML</a></td></tr>
+                <tr><td>Montagem e anotação de genomas bacterianos</td><td>PDF</td><td><a href="materiais/genomica_bacteriana.pdf" target="_blank">Baixar PDF</a></td></tr>
+                <tr><td>Chamada de variantes em genômica humana</td><td>PDF</td><td><a href="materiais/variantes_humanas.pdf" target="_blank">Baixar PDF</a></td></tr>
+                <tr><td>Ementa completa do minicurso</td><td>PDF</td><td><a href="Ementa_Bioinformatica_2026.docx.pdf" target="_blank">Baixar Ementa</a></td></tr>
             </tbody>
         </table>
         <p class="contato-info" style="margin-top: 0.5rem;">Os arquivos estão sendo carregados gradualmente. Caso algum link não funcione, aguarde a atualização ou entre em contato com a organização.</p>
     </div>
 
-    <!-- Cronograma de inscrições -->
+    <!-- Cronograma de inscrições (do curso de inverno geral) -->
     <div class="section">
         <h2>Inscrições e seleção</h2>
         <table class="tabela-inscricoes">
@@ -313,9 +341,9 @@
     <div class="section">
         <h2>Contato e organização</h2>
         <div class="contato-info">
-            <p><strong>E-mail para dúvidas:</strong> curso.inverno@fiocruz.br (exemplo – verificar e-mail oficial)</p>
-            <p><strong>Comissão organizadora:</strong> Alunos do Programa de Pós-Graduação em Biologia Celular e Molecular (PPGBB) e docentes do Instituto Carlos Chagas.</p>
-            <p><strong>Coordenação geral:</strong> Prof. Dr. Alexandre Morrot (ICC/Fiocruz).</p>
+            <p><strong>E-mail para dúvidas sobre o minicurso:</strong> bioinfo.curso.inverno@fiocruz.br (exemplo – verificar e-mail oficial)</p>
+            <p><strong>Coordenação do minicurso:</strong> Prof. Helisson Faoro (ICC/Fiocruz)</p>
+            <p><strong>Comissão organizadora do Curso de Inverno:</strong> Alunos do Programa de Pós-Graduação em Biologia Celular e Molecular (PPGBB) e docentes do Instituto Carlos Chagas.</p>
         </div>
     </div>
 </main>
@@ -327,7 +355,7 @@
             <span>Instituto Carlos Chagas</span>
             <span>PPGBB</span>
         </div>
-        <p>Curso de Inverno 2026 – Programa de Pós-Graduação em Biologia Celular e Molecular | Instituto Carlos Chagas – Fiocruz Paraná</p>
+        <p>Minicurso de Bioinformática – VIII Curso de Inverno do PPGBB | Instituto Carlos Chagas – Fiocruz Paraná</p>
         <p style="margin-top: 0.5rem;">Todos os direitos reservados.</p>
     </div>
 </footer>
