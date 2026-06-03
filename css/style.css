@@ -1,6 +1,9 @@
-/* style.css - Versão atualizada para o minicurso de Bioinformática
-   Estilos inspirados no site do Instituto Carlos Chagas - Fiocruz
-   https://www.icc.fiocruz.br/curso-de-inverno/
+/* style.css - Versão com a paleta personalizada
+   Cores:
+   - Azul médio: #13658e
+   - Azul escuro: #03435e
+   - Ciano: #00c1cf
+   - Cinza claro: #f8f8f8
 */
 
 * {
@@ -11,7 +14,7 @@
 
 body {
     font-family: 'Open Sans', 'Segoe UI', 'Helvetica Neue', sans-serif;
-    background-color: #f2f4f5;
+    background-color: #f8f8f8;
     color: #333;
     line-height: 1.6;
     display: flex;
@@ -31,11 +34,11 @@ main {
 
 /* ===== Cabeçalho (Header) ===== */
 .header {
-    background: linear-gradient(135deg, #0f4a6f 0%, #0b3b5f 100%);
-    background-color: #115c9f; /* Azul Fiocruz */
+    background: linear-gradient(135deg, #13658e 0%, #03435e 100%);
+    background-color: #03435e;
     color: white;
     padding: 2rem 0;
-    border-bottom: 5px solid #b22c1b; /* Vermelho Fiocruz */
+    border-bottom: 5px solid #00c1cf;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -64,8 +67,8 @@ main {
 }
 
 .badge-gratis {
-    background-color: #b22c1b;
-    color: white;
+    background-color: #00c1cf;
+    color: #03435e;
     padding: 0.2rem 0.8rem;
     border-radius: 4px;
     font-size: 0.8rem;
@@ -76,9 +79,10 @@ main {
 
 /* ===== Menu de Navegação ===== */
 .main-nav {
-    background-color: #f8f9fa;
+    background-color: #ffffff;
     border-bottom: 1px solid #e0e0e0;
     padding: 0;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .main-nav .container {
@@ -89,7 +93,7 @@ main {
 }
 
 .main-nav a {
-    color: #333;
+    color: #03435e;
     text-decoration: none;
     padding: 0.8rem 1.2rem;
     font-weight: 600;
@@ -100,33 +104,34 @@ main {
 }
 
 .main-nav a:hover {
-    background-color: #e9ecef;
-    color: #b22c1b;
+    background-color: #f8f8f8;
+    color: #00c1cf;
 }
 
 /* ===== Seções Gerais ===== */
 .section {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
     margin: 2rem 0;
     padding: 1.8rem 2rem;
-    scroll-margin-top: 100px; /* Espaço para fixar o header ao scroll */
+    scroll-margin-top: 100px;
+    border-top: 1px solid #f0f0f0;
 }
 
 .section h2 {
     font-size: 1.6rem;
     margin-bottom: 1.2rem;
-    border-left: 5px solid #b22c1b;
+    border-left: 5px solid #00c1cf;
     padding-left: 1rem;
-    color: #115c9f;
+    color: #13658e;
     font-weight: 600;
 }
 
 .section h3 {
     font-size: 1.3rem;
     margin: 1.5rem 0 0.75rem 0;
-    color: #1e4663;
+    color: #03435e;
 }
 
 /* ===== Cards de Informações ===== */
@@ -138,15 +143,15 @@ main {
 }
 
 .info-card {
-    background: #f8f9fa;
+    background: #f8f8f8;
     padding: 1rem 1.2rem;
     border-radius: 8px;
-    border-left: 3px solid #b22c1b;
+    border-left: 3px solid #00c1cf;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .info-card strong {
-    color: #115c9f;
+    color: #13658e;
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1rem;
@@ -160,6 +165,7 @@ main {
     padding: 0.3rem 1.2rem;
     border-radius: 4px;
     margin-top: 0.5rem;
+    color: #03435e;
 }
 
 /* ===== Listas ===== */
@@ -193,8 +199,8 @@ ul.two-columns {
 }
 
 .tabela-conteudo th {
-    background-color: #e9ecef;
-    color: #115c9f;
+    background-color: #f8f8f8;
+    color: #13658e;
     font-weight: 600;
     width: 30%;
 }
@@ -219,23 +225,23 @@ ul.two-columns {
 }
 
 .tabela-inscricoes th, .tabela-materiais th {
-    background-color: #e9ecef;
-    color: #115c9f;
+    background-color: #f8f8f8;
+    color: #13658e;
     font-weight: 600;
 }
 
 .tabela-materiais a {
-    color: #b22c1b;
+    color: #00c1cf;
     text-decoration: none;
     font-weight: 600;
 }
 
 .tabela-materiais a:hover {
     text-decoration: underline;
-    color: #9e2519;
+    color: #13658e;
 }
 
-/* ===== Cards de Materiais (Nova Seção) ===== */
+/* ===== Cards de Materiais ===== */
 .materiais-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -244,10 +250,10 @@ ul.two-columns {
 }
 
 .material-card {
-    background: #f8f9fa;
+    background: #f8f8f8;
     border-radius: 8px;
     padding: 1rem;
-    border-left: 3px solid #b22c1b;
+    border-left: 3px solid #00c1cf;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
@@ -259,7 +265,7 @@ ul.two-columns {
 
 .material-card h4 {
     margin-bottom: 0.5rem;
-    color: #115c9f;
+    color: #13658e;
     font-size: 1.1rem;
 }
 
@@ -277,7 +283,7 @@ ul.two-columns {
     font-size: 0.75rem;
     font-weight: bold;
     margin-right: 0.5rem;
-    color: #333;
+    color: #03435e;
 }
 
 .material-card .btn-pdf, .material-card .btn-html {
@@ -292,28 +298,29 @@ ul.two-columns {
 }
 
 .material-card .btn-pdf {
-    background-color: #b22c1b;
-    color: white;
+    background-color: #00c1cf;
+    color: #03435e;
 }
 
 .material-card .btn-pdf:hover {
-    background-color: #9e2519;
+    background-color: #13658e;
+    color: white;
 }
 
 .material-card .btn-html {
-    background-color: #115c9f;
+    background-color: #13658e;
     color: white;
 }
 
 .material-card .btn-html:hover {
-    background-color: #0e4a83;
+    background-color: #03435e;
 }
 
 /* ===== Botões Gerais ===== */
 .btn-link {
     display: inline-block;
-    background-color: #b22c1b;
-    color: white;
+    background-color: #00c1cf;
+    color: #03435e;
     text-decoration: none;
     font-weight: bold;
     padding: 0.7rem 1.5rem;
@@ -325,15 +332,17 @@ ul.two-columns {
 }
 
 .btn-link:hover {
-    background-color: #9e2519;
+    background-color: #13658e;
+    color: white;
 }
 
 /* ===== Contato ===== */
 .contato-info {
-    background: #e9ecef;
+    background: #f8f8f8;
     padding: 1.2rem;
     border-radius: 8px;
     margin-top: 1rem;
+    border-left: 3px solid #00c1cf;
 }
 
 .contato-info p {
@@ -341,7 +350,7 @@ ul.two-columns {
 }
 
 .contato-info strong {
-    color: #115c9f;
+    color: #13658e;
 }
 
 .nota {
@@ -352,7 +361,7 @@ ul.two-columns {
 
 /* ===== Rodapé (Footer) ===== */
 .footer {
-    background: #115c9f;
+    background: #03435e;
     color: #e9ecef;
     padding: 2rem 0;
     margin-top: 3rem;
