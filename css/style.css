@@ -1,4 +1,8 @@
-/* Reset e base */
+/* style.css - Versão atualizada para o minicurso de Bioinformática
+   Estilos inspirados no site do Instituto Carlos Chagas - Fiocruz
+   https://www.icc.fiocruz.br/curso-de-inverno/
+*/
+
 * {
     margin: 0;
     padding: 0;
@@ -6,24 +10,35 @@
 }
 
 body {
-    font-family: 'Open Sans', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-    background-color: #f4f6f9;
-    color: #2c3e4e;
+    font-family: 'Open Sans', 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background-color: #f2f4f5;
+    color: #333;
     line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
 }
 
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px;
+    padding: 0 20px;
 }
 
-/* Cabeçalho */
+/* ===== Cabeçalho (Header) ===== */
 .header {
-    background: linear-gradient(135deg, #003f44 0%, #00262b 100%);
+    background: linear-gradient(135deg, #0f4a6f 0%, #0b3b5f 100%);
+    background-color: #115c9f; /* Azul Fiocruz */
     color: white;
     padding: 2rem 0;
-    border-bottom: 5px solid #cc3121;
+    border-bottom: 5px solid #b22c1b; /* Vermelho Fiocruz */
+    position: sticky;
+    top: 0;
+    z-index: 10;
 }
 
 .header h1 {
@@ -33,13 +48,13 @@ body {
 }
 
 .header .subtitle {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     opacity: 0.9;
     margin-bottom: 0.25rem;
 }
 
 .header .date-place {
-    font-size: 1rem;
+    font-size: 0.95rem;
     font-weight: 500;
     background: rgba(255,255,255,0.15);
     display: inline-block;
@@ -49,7 +64,7 @@ body {
 }
 
 .badge-gratis {
-    background-color: #cc3121;
+    background-color: #b22c1b;
     color: white;
     padding: 0.2rem 0.8rem;
     border-radius: 4px;
@@ -59,54 +74,86 @@ body {
     display: inline-block;
 }
 
-/* Seções */
+/* ===== Menu de Navegação ===== */
+.main-nav {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 0;
+}
+
+.main-nav .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.main-nav a {
+    color: #333;
+    text-decoration: none;
+    padding: 0.8rem 1.2rem;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    border-radius: 4px;
+    margin: 0 0.2rem;
+}
+
+.main-nav a:hover {
+    background-color: #e9ecef;
+    color: #b22c1b;
+}
+
+/* ===== Seções Gerais ===== */
 .section {
     background: white;
     border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     margin: 2rem 0;
     padding: 1.8rem 2rem;
-    border-top: 1px solid #e9ecef;
+    scroll-margin-top: 100px; /* Espaço para fixar o header ao scroll */
 }
 
 .section h2 {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     margin-bottom: 1.2rem;
-    border-left: 5px solid #cc3121;
+    border-left: 5px solid #b22c1b;
     padding-left: 1rem;
-    color: #003f44;
+    color: #115c9f;
     font-weight: 600;
 }
 
 .section h3 {
     font-size: 1.3rem;
     margin: 1.5rem 0 0.75rem 0;
-    color: #005f66;
+    color: #1e4663;
 }
 
-/* Cards de informações */
+/* ===== Cards de Informações ===== */
 .info-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    gap: 1.2rem;
-    margin: 1rem 0;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
 }
 
 .info-card {
     background: #f8f9fa;
     padding: 1rem 1.2rem;
     border-radius: 8px;
-    border-left: 3px solid #cc3121;
+    border-left: 3px solid #b22c1b;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .info-card strong {
-    color: #003f44;
+    color: #115c9f;
     display: block;
-    margin-bottom: 0.25rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
 }
 
 .vagas {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-weight: bold;
     background: #e9ecef;
     display: inline-block;
@@ -115,41 +162,70 @@ body {
     margin-top: 0.5rem;
 }
 
-/* Listas */
-ul {
+/* ===== Listas ===== */
+ul, .section ul {
     margin-left: 1.5rem;
     margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
-.two-columns {
+ul.two-columns {
     columns: 2;
     column-gap: 2rem;
 }
 
-/* Tabelas */
-.tabela-conteudo, .tabela-inscricoes, .tabela-materiais {
+/* ===== Tabela de Conteúdo Programático ===== */
+.tabela-conteudo {
     width: 100%;
     border-collapse: collapse;
     margin: 1.2rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
-.tabela-conteudo th, .tabela-conteudo td,
-.tabela-inscricoes th, .tabela-inscricoes td,
-.tabela-materiais th, .tabela-materiais td {
+.tabela-conteudo th, .tabela-conteudo td {
     border: 1px solid #dee2e6;
-    padding: 10px 12px;
+    padding: 12px;
     vertical-align: top;
     text-align: left;
 }
 
-.tabela-conteudo th, .tabela-inscricoes th, .tabela-materiais th {
+.tabela-conteudo th {
     background-color: #e9ecef;
-    color: #003f44;
+    color: #115c9f;
+    font-weight: 600;
+    width: 30%;
+}
+
+/* ===== Tabelas de Inscrições e Materiais ===== */
+.tabela-inscricoes, .tabela-materiais {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1.2rem 0;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.tabela-inscricoes th, .tabela-inscricoes td,
+.tabela-materiais th, .tabela-materiais td {
+    border: 1px solid #dee2e6;
+    padding: 12px;
+    vertical-align: top;
+    text-align: left;
+}
+
+.tabela-inscricoes th, .tabela-materiais th {
+    background-color: #e9ecef;
+    color: #115c9f;
     font-weight: 600;
 }
 
 .tabela-materiais a {
-    color: #cc3121;
+    color: #b22c1b;
     text-decoration: none;
     font-weight: 600;
 }
@@ -159,10 +235,84 @@ ul {
     color: #9e2519;
 }
 
-/* Botões */
+/* ===== Cards de Materiais (Nova Seção) ===== */
+.materiais-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin: 1.5rem 0;
+}
+
+.material-card {
+    background: #f8f9fa;
+    border-radius: 8px;
+    padding: 1rem;
+    border-left: 3px solid #b22c1b;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    box-shadow: 0 1px 2px rgba(0,0,0,0.05);
+}
+
+.material-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.material-card h4 {
+    margin-bottom: 0.5rem;
+    color: #115c9f;
+    font-size: 1.1rem;
+}
+
+.material-card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.material-card .badge {
+    display: inline-block;
+    background: #e9ecef;
+    padding: 0.2rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+    margin-right: 0.5rem;
+    color: #333;
+}
+
+.material-card .btn-pdf, .material-card .btn-html {
+    display: inline-block;
+    margin-top: 0.5rem;
+    padding: 0.3rem 0.8rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background 0.2s ease;
+}
+
+.material-card .btn-pdf {
+    background-color: #b22c1b;
+    color: white;
+}
+
+.material-card .btn-pdf:hover {
+    background-color: #9e2519;
+}
+
+.material-card .btn-html {
+    background-color: #115c9f;
+    color: white;
+}
+
+.material-card .btn-html:hover {
+    background-color: #0e4a83;
+}
+
+/* ===== Botões Gerais ===== */
 .btn-link {
     display: inline-block;
-    background-color: #cc3121;
+    background-color: #b22c1b;
     color: white;
     text-decoration: none;
     font-weight: bold;
@@ -178,22 +328,31 @@ ul {
     background-color: #9e2519;
 }
 
-/* Bloco de contato */
+/* ===== Contato ===== */
 .contato-info {
     background: #e9ecef;
-    padding: 1rem;
+    padding: 1.2rem;
     border-radius: 8px;
     margin-top: 1rem;
 }
 
+.contato-info p {
+    margin-bottom: 0.5rem;
+}
+
+.contato-info strong {
+    color: #115c9f;
+}
+
 .nota {
     font-size: 0.85rem;
+    color: #666;
     margin-top: 0.5rem;
 }
 
-/* Rodapé */
+/* ===== Rodapé (Footer) ===== */
 .footer {
-    background: #00262b;
+    background: #115c9f;
     color: #e9ecef;
     padding: 2rem 0;
     margin-top: 3rem;
@@ -214,21 +373,35 @@ ul {
     background: rgba(255,255,255,0.1);
     padding: 0.3rem 1rem;
     border-radius: 4px;
-    font-size: 0.85rem;
+    font-size: 0.8rem;
 }
 
-/* Responsividade */
-@media (max-width: 700px) {
-    .section {
-        padding: 1.2rem;
-    }
+/* ===== Responsividade ===== */
+@media (max-width: 768px) {
     .header h1 {
         font-size: 1.5rem;
     }
+
+    .section {
+        padding: 1.2rem;
+    }
+
+    ul.two-columns {
+        columns: 1;
+    }
+
     .tabela-conteudo, .tabela-materiais, .tabela-inscricoes {
         font-size: 0.85rem;
     }
-    .two-columns {
-        columns: 1;
+
+    .tabela-conteudo th, .tabela-conteudo td,
+    .tabela-materiais th, .tabela-materiais td,
+    .tabela-inscricoes th, .tabela-inscricoes td {
+        padding: 8px;
+    }
+
+    .main-nav a {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
     }
 }
