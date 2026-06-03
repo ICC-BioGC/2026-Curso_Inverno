@@ -1,9 +1,10 @@
-/* style.css - Versão com a paleta personalizada
-   Cores:
+/* style.css - Paleta revisada com laranja #ff9c08
+   Cores principais:
+   - Destaque (laranja): #ff9c08
    - Azul médio: #13658e
    - Azul escuro: #03435e
-   - Ciano: #00c1cf
-   - Cinza claro: #f8f8f8
+   - Ciano (secundário): #00c1cf
+   - Fundo claro: #f8f8f8
 */
 
 * {
@@ -38,7 +39,7 @@ main {
     background-color: #03435e;
     color: white;
     padding: 2rem 0;
-    border-bottom: 5px solid #00c1cf;
+    border-bottom: 5px solid #ff9c08;
     position: sticky;
     top: 0;
     z-index: 10;
@@ -67,7 +68,7 @@ main {
 }
 
 .badge-gratis {
-    background-color: #00c1cf;
+    background-color: #ff9c08;
     color: #03435e;
     padding: 0.2rem 0.8rem;
     border-radius: 4px;
@@ -105,7 +106,7 @@ main {
 
 .main-nav a:hover {
     background-color: #f8f8f8;
-    color: #00c1cf;
+    color: #ff9c08;
 }
 
 /* ===== Seções Gerais ===== */
@@ -122,7 +123,7 @@ main {
 .section h2 {
     font-size: 1.6rem;
     margin-bottom: 1.2rem;
-    border-left: 5px solid #00c1cf;
+    border-left: 5px solid #ff9c08;
     padding-left: 1rem;
     color: #13658e;
     font-weight: 600;
@@ -146,7 +147,7 @@ main {
     background: #f8f8f8;
     padding: 1rem 1.2rem;
     border-radius: 8px;
-    border-left: 3px solid #00c1cf;
+    border-left: 3px solid #ff9c08;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
@@ -231,7 +232,7 @@ ul.two-columns {
 }
 
 .tabela-materiais a {
-    color: #00c1cf;
+    color: #ff9c08;
     text-decoration: none;
     font-weight: 600;
 }
@@ -253,7 +254,7 @@ ul.two-columns {
     background: #f8f8f8;
     border-radius: 8px;
     padding: 1rem;
-    border-left: 3px solid #00c1cf;
+    border-left: 3px solid #ff9c08;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
@@ -298,7 +299,7 @@ ul.two-columns {
 }
 
 .material-card .btn-pdf {
-    background-color: #00c1cf;
+    background-color: #ff9c08;
     color: #03435e;
 }
 
@@ -319,7 +320,7 @@ ul.two-columns {
 /* ===== Botões Gerais ===== */
 .btn-link {
     display: inline-block;
-    background-color: #00c1cf;
+    background-color: #ff9c08;
     color: #03435e;
     text-decoration: none;
     font-weight: bold;
@@ -342,11 +343,7 @@ ul.two-columns {
     padding: 1.2rem;
     border-radius: 8px;
     margin-top: 1rem;
-    border-left: 3px solid #00c1cf;
-}
-
-.contato-info p {
-    margin-bottom: 0.5rem;
+    border-left: 3px solid #ff9c08;
 }
 
 .contato-info strong {
