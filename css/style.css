@@ -13,6 +13,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Open Sans', 'Segoe UI', 'Helvetica Neue', sans-serif;
     background-color: #f8f8f8;
@@ -40,9 +44,6 @@ main {
     color: white;
     padding: 2rem 0;
     border-bottom: 5px solid #ff9c08;
-    position: sticky;
-    top: 0;
-    z-index: 10;
 }
 
 .header h1 {
@@ -80,10 +81,11 @@ main {
 
 /* ===== Menu de Navegação ===== */
 .main-nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     background-color: #ffffff;
-    border-bottom: 1px solid #e0e0e0;
-    padding: 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .main-nav .container {

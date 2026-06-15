@@ -10,15 +10,6 @@
 <body>
 
 <header class="header">
-<nav class="main-nav">
-    <div class="container">
-        <a href="#sobre">Sobre</a>
-        <a href="#programacao">Programação</a>
-        <a href="#materiais">Materiais</a>
-        <a href="#contato">Contato</a>
-    </div>
-</nav>
-    
     <div class="container">
         <h1>Minicurso de Bioinformática <span class="badge-gratis">Presencial + Gratuito</span></h1>
         <div class="subtitle">VIII Curso de Inverno do PPGBB – Instituto Carlos Chagas (ICC/Fiocruz)</div>
@@ -31,52 +22,77 @@
     </div>
 </header>
 
+<nav class="main-nav">
+        <div class="container">
+        <a href="#sobre">Sobre</a>
+        <a href="#materiais">Materiais</a>
+        <a href="#programacao">Programação</a>
+        <a href="#contato">Contato</a>
+    </div>
+</nav>
+
 <main class="container">
     <!-- Sobre o minicurso -->
-    <div class="section">
+    <div class="section" id="sobre">
         <h2>Sobre o minicurso</h2>
         <p><strong>Bioinformática básica e aplicada à genômica e transcriptômica</strong></p>
         <p>Este minicurso introdutório tem como objetivo capacitar estudantes no uso de ferramentas e fluxos de trabalho fundamentais em bioinformática, com foco em aplicações práticas nas áreas de genômica de bactérias e genética humana. Ao longo de cinco encontros teórico-práticos, os participantes aprenderão desde o uso básico do terminal Linux até análises completas de montagem genômica, filogenia, identificação de variantes germinativas humanas e análise de expressão gênica por RNA-Seq. Serão utilizados dados reais de bancos públicos e ferramentas amplamente aplicadas na pesquisa biomédica e biotecnológica.</p>
         <p style="margin-top: 0.75rem;">Ao final do curso, os alunos estarão aptos a realizar análises básicas de dados ômicos no contexto das biociências e da biotecnologia.</p>
+        <p class="vagas">Vagas: 8</p><br>
+
+        <!-- Pré-requisitos -->
+        <br><h2>Pré-requisitos</h2>
+        <ul>
+            <li>Conhecimentos básicos em biologia molecular e/ou genética.</li>
+            <li>Desejável familiaridade com inglês técnico e uso de computador.</li>
+            <li>Não é necessário conhecimento prévio em programação ou Linux.</li>
+        </ul>
+
+        <!-- Equipe de monitores -->
+        <br><h2>Equipe de monitores</h2>
+        <p>Discentes responsáveis pelo minicurso:</p>
+        <ul class="two-columns">
+            <li>Giovanna Prezia (Doutorado)<sup>2</sup></li>
+            <li>Hector Hugo Furini (Doutorado)<sup>1</sup></li>
+            <li>Helena Regina Salome D'Espindula (Pós-Doc)<sup>1</sup></li>
+            <li>Isabel de Farias Ribeiro (Mestrado)<sup>1</sup></li>
+            <li>Joyce de Souza (Doutorado)<sup>1</sup></li>
+            <li>Marco Antônio Campanário (Doutorado)<sup>1</sup></li>
+            <li>Rodrigo Alexandre Lusa (Mestrado)<sup>1</sup></li>
+            <li>Sophia Pereira Ozório (Mestrado)<sup>1</sup></li>
+        </ul>
+        
+        <!-- Informações gerais -->
+        <div class="info-grid">
+            <div class="info-card"><strong>Laboratórios</strong>Laboratório de Bioinformática e Genômica Clínica <a href="https://www.icc.fiocruz.br/laboratorios/" target="_blank">(BioGC)</a><sup>1</sup><br>Laboratório de Biologia Básica e Células-Tronco <a href="https://www.icc.fiocruz.br/laboratorios/" target="_blank">(LabCeT)</a><sup>2</sup></div>
+            <div class="info-card"><strong>Docente responsável</strong><a href="http://lattes.cnpq.br/1864025543667883" target="_blank">Prof. Dr. Helisson Faoro<sup>1</sup></a></div>
+            <div class="info-card"><strong>Formato</strong>Presencial, teórico-prático. Uso de computadores.</div>
+            <div class="info-card"><strong>Carga horária</strong>20 horas</div>
+        </div>
+    
     </div>
 
     <!-- Material das aulas -->
-    <div class="section">
+    <div class="section" id="materiais">
         <h2>Material das aulas</h2>
         <p>Apresentações e arquivos utilizados durante o minicurso. Os materiais serão disponibilizados conforme autorização dos docentes.</p>
         <table class="tabela-materiais">
             <thead>
-                <tr><th>Aula / Tópico</th><th>Formato</th><th>Link</th></tr>
+                <h3><tr><th>Aula / Tópico</th><th>Página</th><th>PDFs</th></tr></h3>
             </thead>
             <tbody>
-                <tr><td>Introdução ao Unix e linha de comando</td><td>PDF</td><td><a href="materiais/aula1_bioinfo.pdf" target="_blank">Baixar PDF</a></td></tr>
-                <tr><td>Análise de RNA-Seq (Pipeline completo)</td><td>HTML</td><td><a href="materiais/aula2_bioinfo.html" target="_blank">Visualizar HTML</a></td></tr>
-                <tr><td>Montagem e anotação de genomas bacterianos</td><td>PDF</td><td><a href="materiais/genomica_bacteriana.pdf" target="_blank">Baixar PDF</a></td></tr>
-                <tr><td>Chamada de variantes em genômica humana</td><td>PDF</td><td><a href="materiais/variantes_humanas.pdf" target="_blank">Baixar PDF</a></td></tr>
-                <tr><td>Ementa completa do minicurso</td><td>PDF</td><td><a href="Ementa_Bioinformatica_2026.docx.pdf" target="_blank">Baixar Ementa</a></td></tr>
+                <tr><td>Fundamentos de Bioinformática e Linux</td><td><a href="materiais/aula1_bioinfo.html">Link</a></td><td><a href="materiais/aula1_bioinfo.pdf" target="_blank">Baixar PDF</a></td></tr>
+                <tr><td>Genômica Bacteriana e Filogenia</td><td><a href="materiais/aula2_bioinfo.html">Link</a></td><td><a href="materiais/aula2_bioinfo.pdf" target="_blank">Baixar PDF</a></td></tr>
+                <tr><td>Genômica Humana</td><td><a href="materiais/aula3_bioinfo.html">Link</a></td><td><a href="materiais/aula3_bioinfo.pdf" target="_blank">Baixar PDF</a></td></tr>
+                <tr><td>Análise de RNA-Seq</td><td><a href="materiais/aula4_bioinfo.html">Link</a></td><td><a href="materiais/aula4_bioinfo.pdf" target="_blank">Baixar PDF</a></td></tr>
+                <tr><td>Ementa completa do minicurso</td><td><a href="#programacao">Link</a></td><td><a href="Ementa_Bioinformatica_2026.docx.pdf" target="_blank">Baixar PDF</a></td></tr>
             </tbody>
         </table>
         <p class="contato-info" style="margin-top: 0.5rem;">Os arquivos estão sendo carregados gradualmente. Caso algum link não funcione, aguarde a atualização ou entre em contato com a organização.</p>
-    </div>    
-
-    <!-- Equipe de monitores -->
-    <div class="section">
-        <h2>Equipe de monitores</h2>
-        <p>Discentes responsáveis pelo minicurso:</p>
-        <ul class="two-columns">
-            <li>Giovanna Prezia (Doutorado)</li>
-            <li>Hector Hugo Furini (Doutorado)</li>
-            <li>Helena Regina Salome D'Espindula (Pós-Doc)</li>
-            <li>Isabel de Farias Ribeiro (Mestrado)</li>
-            <li>Joyce de Souza (Doutorado)</li>
-            <li>Marco Antônio Campanário (Doutorado)</li>
-            <li>Rodrigo Alexandre Lusa (Mestrado)</li>
-            <li>Sophia Pereira Ozório (Mestrado)</li>
-        </ul>
     </div>
 
     <!-- Conteúdo programático -->
-    <div class="section">
+    <div class="section" id="programacao">
         <h2>Conteúdo programático</h2>
         <table class="tabela-conteudo">
             <thead>
@@ -92,30 +108,7 @@
         </table>
         <p class="nota">* Programação sujeita a ajustes conforme disponibilidade de infraestrutura e ritmo da turma.</p>
     </div>
-
     
-    <!-- Informações gerais -->
-    <div class="section">
-        <h2>Informações gerais</h2>
-        <div class="info-grid">
-            <div class="info-card"><strong>Laboratórios</strong>BioGC e LabCet</div>
-            <div class="info-card"><strong>Docente responsável</strong>Helisson Faoro</div>
-            <div class="info-card"><strong>Formato</strong>Presencial, teórico-prático. Uso de computadores.</div>
-            <div class="info-card"><strong>Carga horária</strong>20 horas</div>
-        </div>
-        <p class="vagas">Vagas: 8</p>
-    </div>
-
-    
-    <!-- Pré-requisitos -->
-    <div class="section">
-        <h2>Pré-requisitos</h2>
-        <ul>
-            <li>Conhecimentos básicos em biologia molecular e/ou genética.</li>
-            <li>Desejável familiaridade com inglês técnico e uso de computador.</li>
-            <li>Não é necessário conhecimento prévio em programação ou Linux.</li>
-        </ul>
-    </div>
 
     <!-- Inscrições e seleção -->
     <div class="section">
@@ -130,12 +123,13 @@
     </div>
 
     <!-- Contato e organização -->
-    <div class="section">
+    <div class="section" id="contato">
         <h2>Contato e organização</h2>
         <div class="contato-info">
-            <p><strong>E-mail para dúvidas sobre o minicurso:</strong> bioinfo.curso.inverno@fiocruz.br (exemplo – verificar e-mail oficial)</p>
-            <p><strong>Coordenação do minicurso:</strong> Prof. Helisson Faoro (ICC/Fiocruz)</p>
+            <p><strong>E-mail oficial: </strong><a href="mailto:cursodeinverno.ppgbb.icc@gmail.com">cursodeinverno.ppgbb.icc@gmail.com</a></p>
+            <p><strong>Coordenação do Minicurso de Bioinformática:</strong> Prof. Helisson Faoro (ICC/Fiocruz)</p>
             <p><strong>Comissão organizadora do Curso de Inverno:</strong> Alunos do Programa de Pós-Graduação em Biologia Celular e Molecular (PPGBB) e docentes do Instituto Carlos Chagas.</p>
+            <p><strong>Para mais informações, visite a <a href="https://www.icc.fiocruz.br/curso-de-inverno/" target="_blank" rel="noopener noreferrer">página oficial</a> do Curso de Inverno.</strong></p>
         </div>
     </div>
 </main>
