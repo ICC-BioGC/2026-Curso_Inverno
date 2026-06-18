@@ -1,10 +1,17 @@
-/* style.css - Paleta revisada com laranja #ff9c08
+/* style.css - Paleta revisada com laranja #00bbf9
    Cores principais:
-   - Destaque (laranja): #ff9c08
-   - Azul médio: #13658e
+   - Destaque (laranja): #00bbf9
+   - Azul médio: #00bbf9
    - Azul escuro: #03435e
    - Ciano (secundário): #00c1cf
    - Fundo claro: #f8f8f8
+
+   Nova paleta:
+   --lavender-purple: #9b5de5ff;
+    --deep-pink: #f15bb5ff;
+    --banana-cream: #fee440ff;
+    --deep-sky-blue: #00bbf9ff;
+    --aquamarine: #00f5d4ff;
 */
 
 * {
@@ -37,13 +44,31 @@ main {
     padding: 0 20px;
 }
 
+
 /* ===== Cabeçalho (Header) ===== */
 .header {
-    background: linear-gradient(135deg, #13658e 0%, #03435e 100%);
-    background-color: #03435e;
+    background: linear-gradient(-165deg, #00445a44 0%, #f15bb5 100%);
+    background-color: #00bbf9;
     color: white;
     padding: 2rem 0;
-    border-bottom: 5px solid #ff9c08;
+    border-bottom: 5px solid #f15bb5;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.header-logo {
+    height: 180px;
+    width: auto;
+    flex-shrink: 0;
+    background-color: #ffffff;
+    border: 0px solid #ffffff;
+    border-radius: 100px;
+    box-shadow: 10px 10px 15px rgba(0,0,0,0.3);
 }
 
 .header h1 {
@@ -64,18 +89,19 @@ main {
     background: rgba(255,255,255,0.15);
     display: inline-block;
     padding: 0.3rem 1rem;
-    border-radius: 4px;
+    border-radius: 5px;
     margin-top: 0.75rem;
 }
 
 .badge-gratis {
-    background-color: #ff9c08;
-    color: #03435e;
+    background-color: #fee440;
+    color: #936ac4;
     padding: 0.2rem 0.8rem;
-    border-radius: 4px;
-    font-size: 0.8rem;
-    font-weight: bold;
-    margin-left: 0.75rem;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: 0rem;
+    margin-right: 0rem;
     display: inline-block;
 }
 
@@ -93,22 +119,24 @@ main {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
+    padding: 0.2rem 0.2rem;
 }
 
 .main-nav a {
-    color: #03435e;
+    color: #541c97;
     text-decoration: none;
-    padding: 0.8rem 1.2rem;
+    padding: 0.6rem 1.2rem;
     font-weight: 600;
-    font-size: 0.9rem;
+    font-size: 16px;
     transition: background-color 0.2s ease, color 0.2s ease;
-    border-radius: 4px;
-    margin: 0 0.2rem;
+    border-radius: 0%;
+    margin: 0 1rem;
 }
 
 .main-nav a:hover {
-    background-color: #f8f8f8;
-    color: #ff9c08;
+    background-color: #f15bb5ab;
+    border-radius: 0%;
+    color: #ffffff;
 }
 
 /* ===== Seções Gerais ===== */
@@ -125,10 +153,11 @@ main {
 .section h2 {
     font-size: 1.6rem;
     margin-bottom: 1.2rem;
-    border-left: 5px solid #ff9c08;
-    padding-left: 1rem;
-    color: #13658e;
+    border-left: 6px solid #fee440;
+    padding-left: 0.6rem;
+    color: #f15bb5;
     font-weight: 600;
+    background-color: #ffffff;
 }
 
 .section h3 {
@@ -136,7 +165,6 @@ main {
     margin: 1.5rem 0 0.75rem 0;
     color: #03435e;
 }
-
 /* ===== Cards de Informações ===== */
 .info-grid {
     display: grid;
@@ -149,26 +177,31 @@ main {
     background: #f8f8f8;
     padding: 1rem 1.2rem;
     border-radius: 8px;
-    border-left: 3px solid #ff9c08;
+    border-left: 3px solid #fee440;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
 
 .info-card strong {
-    color: #13658e;
+    color: #f15bb5;
     display: block;
     margin-bottom: 0.5rem;
     font-size: 1rem;
 }
 
+.info-card a{
+    color: #9b5de5;
+    text-decoration: none;
+}
+
 .vagas {
     font-size: 1rem;
     font-weight: bold;
-    background: #e9ecef;
+    background: #fee540d7;
     display: inline-block;
     padding: 0.3rem 1.2rem;
     border-radius: 4px;
     margin-top: 0.5rem;
-    color: #03435e;
+    color: #936ac4;
 }
 
 /* ===== Listas ===== */
@@ -203,7 +236,7 @@ ul.two-columns {
 
 .tabela-conteudo th {
     background-color: #f8f8f8;
-    color: #13658e;
+    color: #00bbf9;
     font-weight: 600;
     width: 30%;
 }
@@ -229,19 +262,19 @@ ul.two-columns {
 
 .tabela-inscricoes th, .tabela-materiais th {
     background-color: #f8f8f8;
-    color: #13658e;
+    color: #f15bb5;
     font-weight: 600;
 }
 
 .tabela-materiais a {
-    color: #ff9c08;
+    color: #00bbf9;
     text-decoration: none;
     font-weight: 600;
 }
 
 .tabela-materiais a:hover {
     text-decoration: underline;
-    color: #13658e;
+    color: #fee440;
 }
 
 /* ===== Cards de Materiais ===== */
@@ -256,7 +289,7 @@ ul.two-columns {
     background: #f8f8f8;
     border-radius: 8px;
     padding: 1rem;
-    border-left: 3px solid #ff9c08;
+    border-left: 3px solid #fee440;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
     box-shadow: 0 1px 2px rgba(0,0,0,0.05);
 }
@@ -268,7 +301,7 @@ ul.two-columns {
 
 .material-card h4 {
     margin-bottom: 0.5rem;
-    color: #13658e;
+    color: #fee440;
     font-size: 1.1rem;
 }
 
@@ -301,17 +334,17 @@ ul.two-columns {
 }
 
 .material-card .btn-pdf {
-    background-color: #ff9c08;
+    background-color: #00bbf9;
     color: #03435e;
 }
 
 .material-card .btn-pdf:hover {
-    background-color: #13658e;
+    background-color: #00bbf9;
     color: white;
 }
 
 .material-card .btn-html {
-    background-color: #13658e;
+    background-color: #00bbf9;
     color: white;
 }
 
@@ -322,7 +355,7 @@ ul.two-columns {
 /* ===== Botões Gerais ===== */
 .btn-link {
     display: inline-block;
-    background-color: #ff9c08;
+    background-color: #00bbf9;
     color: #03435e;
     text-decoration: none;
     font-weight: bold;
@@ -335,7 +368,7 @@ ul.two-columns {
 }
 
 .btn-link:hover {
-    background-color: #13658e;
+    background-color: #00bbf9;
     color: white;
 }
 
@@ -345,11 +378,16 @@ ul.two-columns {
     padding: 1.2rem;
     border-radius: 8px;
     margin-top: 1rem;
-    border-left: 3px solid #ff9c08;
+    border-left: 3px solid #fee440;
 }
 
 .contato-info strong {
-    color: #13658e;
+    color: #f15bb5;
+}
+
+.contato-info a{
+    color: #9b5de5;
+    text-decoration: underline;
 }
 
 .nota {
@@ -360,7 +398,7 @@ ul.two-columns {
 
 /* ===== Rodapé (Footer) ===== */
 .footer {
-    background: #03435e;
+    background: #f15bb5;
     color: #e9ecef;
     padding: 2rem 0;
     margin-top: 3rem;
