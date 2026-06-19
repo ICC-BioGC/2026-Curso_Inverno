@@ -160,10 +160,27 @@ main {
     background-color: #ffffff;
 }
 
+pre {
+  background-color: #1e1e1e;
+  color: #d4d4d4;
+  padding: 16px 20px;
+  border-radius: 8px;
+  border: 1px solid #333333;
+  overflow-x: auto;
+  margin: 20px 0;
+}
+
+pre code {
+  font-family: 'Fira Code', 'Courier New', Courier, monospace;
+  font-size: 14px;
+  line-height: 1.5;
+  word-break: normal;
+  white-space: pre;
+}
 .section h3 {
     font-size: 1.3rem;
     margin: 1.5rem 0 0.75rem 0;
-    color: #03435e;
+    color: #541c97;
 }
 /* ===== Cards de Informações ===== */
 .info-grid {
@@ -214,6 +231,12 @@ ul, .section ul {
 ul.two-columns {
     columns: 2;
     column-gap: 2rem;
+}
+
+ol, .section ul {
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 /* ===== Tabela de Conteúdo Programático ===== */
