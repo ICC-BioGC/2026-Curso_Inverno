@@ -474,3 +474,13 @@ ol, .section ul {
         font-size: 0.85rem;
     }
 }
+
+/* ===== Formatação específica genomica humana ===== */
+.genomica-humana {
+    text-align: justify;
+    line-height: 1.6;
+}
+
+.genomica-humana p {
+    margin-bottom: 1.2rem;
+}
